@@ -4,7 +4,9 @@ var uu = require('underscore');
 var indexfn = function(request, response) {
     response.render("homepage", {
 	name: Constants.APP_NAME,
-	title: "My First" + Constants.APP_NAME
+	title: "My First " + Constants.APP_NAME,
+	product_name: Constants.PRODUCT_NAME,
+	product_short_description: Constants.PRODUCT_SHORT_DESCRIPTION
 });
 };
 
