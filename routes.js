@@ -6,7 +6,8 @@ var indexfn = function(request, response) {
 	name: Constants.APP_NAME,
 	title: "My First " + Constants.APP_NAME,
 	product_name: Constants.PRODUCT_NAME,
-	product_short_description: Constants.PRODUCT_SHORT_DESCRIPTION
+	product_short_description: Constants.PRODUCT_SHORT_DESCRIPTION,
+	coinbase_preorder_data_code: Constants.COINBASE_PREORDER_DATA_CODE
 });
 };
 
