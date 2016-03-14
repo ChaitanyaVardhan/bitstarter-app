@@ -7,6 +7,8 @@ var indexfn = function(request, response) {
 	title: "My First " + Constants.APP_NAME,
 	product_name: Constants.PRODUCT_NAME,
 	product_short_description: Constants.PRODUCT_SHORT_DESCRIPTION,
+	twitter_username: Constants.TWITTER_USERNAME,
+	twitter_tweet: Constants.TWITTER_TWEET,
 	coinbase_preorder_data_code: Constants.COINBASE_PREORDER_DATA_CODE
 });
 };
