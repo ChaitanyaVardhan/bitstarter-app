@@ -47,66 +47,72 @@
 	</div>
       </div>
       
-<div class="row-fluid subheading">
-<div class="span12">   
-<p class="lead"><%= product_short_description %></p>
-</div>
-</div>
+      <div class="row-fluid subheading">
+        <div class="span12">   
+          <p class="lead"><%= product_short_description %></p>
+        </div>
+      </div>
 
-<div class="row-fluid pitch">
-<div class="span5 offset1 video">
-  <img class="img-polariod" src="img/480x300.gif">
-</div>
+      <div class="row-fluid pitch">
+        <div class="span5 offset1 video">
+          <img class="img-polariod" src="img/480x300.gif">
+        </div>
 
-<div class="span5 actions" ng-controller="OrdersCtrl">
-  <div class="row fluid">
-    <div class="span8 offset2">
-      <div class="row-fluid statistics">
-        <div ng-show="!error">
-          <div class="span4">
-            <div class="linediv-l">
-              <h3>{{num_orders}}</h3> <p>backers</p>
-            </div>
-	  </div>
-          <div class="span4">
-            <div class="linediv-c">
-              <h3>{{total_funded}}</h3> <p>of {{target}} <span class="currency">{{unit_symbol}}</span></p>
+        <div class="span5 actions" ng-controller="OrdersCtrl">
+          <div class="row fluid">
+          <div class="span8 offset2">
+            <div class="row-fluid statistics">
+              <div ng-show="!error">
+                <div class="span4">
+                  <div class="linediv-l">
+                  <h3>{{num_orders}}</h3> <p>backers</p>
+                  </div>
+      	        </div>
+                <div class="span4">
+                  <div class="linediv-c">
+                  <h3>{{total_funded}}</h3> <p>of {{target}} <span class="currency">{{unit_symbol}}</span></p>
+                  </div>
+                </div>
+      	        <div class="span4">
+      	          <div class="linediv-r">
+	          <h3>{{days_left}}</h3> <p>days left</p>
+	          </div>
+	        </div>
+              </div>
+	      <div ng-show="error">
+	        <h3>{{error}}</h3>
+    	      </div>
             </div>
           </div>
-	  <div class="span4">
-	    <div class="linediv-r">
-	      <h3>{{days_left}}</h3> <p>days left</p>
+          <div class="row-fluid" ng-show="!error">
+          <div class="span10 offset1">
+            <div class="thermometer progress active">
+	      <div class="bar bar-success" ng-style="{'width': percentage_funded+ '%'}"></div>
+	      <div class="bar bar-warning" ng-style="{'width': (100-percentage_funded)+ '%'}"></div>
+            </div>
+          </div>
+          </div>
+          <div class="row-fluid">
+            <div class="span6 offset3 order">
+	      <a class="coinbase-button"
+	         data-button-style="custom-large"
+	         data-button-text="Preorder with bitcoin"
+	         data-custom="Finished order"
+	         data-code="<%= coinbase_preorder_data_code %>"
+	         href="https://coinbase.com/checkouts/<%= coinbase_preorder_data_code %>">Preorder with Bitcoin</a>
+            </div>
+          </div>
+	  <div class="row-fluid">
+	  <div class="span9 offset3 social">
+	    <div class="addthis_toolbox addthis_default_style">
+	      <a class="addthis_button_tweet" tw:via="<%= twitter_username %>" tw:text="<%= twitter_tweet %>"></a>
 	    </div>
+	    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5214a5fe5dbdc2b4"></script>
+	  </div>
 	  </div>
         </div>
-	<div ng-show="error">
-	  <h3>{{error}}</h3>
-	</div>
       </div>
     </div>
-    <div class="row-fluid" ng-show="!error">
-    <div class="span10 offset1">
-      <div class="thermometer progress active">
-	<div class="bar bar-success" ng-style="{'width': percentage_funded+ '%'}"></div>
-	<div class="bar bar-warning" ng-style="{'width': (100-percentage_funded)+ '%'}"></div>
-      </div>
-    </div>
-    </div>
-    <div class="row-fluid">
-      <div class="span6 offset3 order">
-	<a class="coinbase-button"
-	   data-button-style="custom-large"
-	   data-button-text="Preorder with bitcoin"
-	   data-custom="Finished order"
-	   data-code="<%= coinbase_preorder_data_code %>"
-	   href="https://coinbase.com/checkouts/<%= coinbase_preorder_data_code %>">Preorder with Bitcoin</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-</div>
 
 </body>
 
